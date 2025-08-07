@@ -38,7 +38,7 @@ static RegisterPrimOp prim_mod(PrimOp {
     .name = "mod",
     .args = {"e1", "e2"},
     .arity = 2,
-    .doc = "Return the result the remainder of *e1* divided by *e2*.",
+    .doc = "Return the result is the remainder of *e1* divided by *e2*.",
     .fun = [](EvalState & state, Value * * args, Value & v)
     {
         int i2 = state.forceInt(*args[1], noPos, "while evaluating the second operand of the modulo operation").value;

@@ -6,7 +6,7 @@ static RegisterPrimOp prim_abs(PrimOp {
     .name = "abs",
     .args = {"e"},
     .arity = 1,
-    .doc = "Return the absolute value of the number *e*",
+    .doc = "Returns the absolute value of the number *e*",
     .fun = [](EvalState & state, Value * * args, Value & v)
     {
         state.forceValue(*args[0], noPos);
@@ -22,7 +22,7 @@ static RegisterPrimOp prim_pow(PrimOp {
     .name = "pow",
     .args = {"e1", "e2"},
     .arity = 2,
-    .doc = "Return the result of *e1* to the power of *e2*.",
+    .doc = "Returns the result of *e1* to the power of *e2*.",
     .fun = [](EvalState & state, Value * * args, Value & v)
     {
         state.forceValue(*args[0], noPos);
@@ -38,7 +38,7 @@ static RegisterPrimOp prim_mod(PrimOp {
     .name = "mod",
     .args = {"e1", "e2"},
     .arity = 2,
-    .doc = "Return the result is the remainder of *e1* divided by *e2*.",
+    .doc = "Returns the result is the remainder of *e1* divided by *e2*.",
     .fun = [](EvalState & state, Value * * args, Value & v)
     {
         int i2 = state.forceInt(*args[1], noPos, "while evaluating the second operand of the modulo operation").value;
